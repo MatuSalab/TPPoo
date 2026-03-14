@@ -78,14 +78,6 @@ valorBase := unVa .
 ]
 
 { #category : 'initialization' }
-Servicio >> inicializarServicioConNombre: unNombre costo: unCosto descripcion: unaDescripcion [
-
-	nombre := unNombre.
-	costo := unCosto.
-	descripcion := unaDescripcion
-]
-
-{ #category : 'initialization' }
 Servicio >> mostrarDatos [
 
 	^ '| descripcion del servicio: ' asString , descripcion asString

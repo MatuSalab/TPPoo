@@ -47,15 +47,6 @@ guardamuebles inicializar: unaDesc conNombre: unNo conValor: unVa conTamaño: un
 ^guardamuebles 
 ]
 
-{ #category : 'metodos' }
-Guardamuebles >> condicionesMulta: inicio [
-
-	| multa |
-	multa := 0.
-	((inicio - Date today) days > 10) ifFalse: [ multa := costo * 0.1 ].
-	^ multa
-]
-
 { #category : 'as yet unclassified' }
 Guardamuebles >> devolverListaDatos [
 | listado textotamaño textoaislamiento textoguardaLlave|

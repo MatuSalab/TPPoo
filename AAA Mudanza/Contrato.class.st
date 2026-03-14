@@ -53,11 +53,6 @@ Contrato >> cancelar [
 activo := false
 ]
 
-{ #category : 'comparing' }
-Contrato >> equals: unId [
-	^unId=id.
-]
-
 { #category : 'as yet unclassified' }
 Contrato >> esIgual: unCodigo [
 
@@ -67,13 +62,6 @@ Contrato >> esIgual: unCodigo [
 { #category : 'as yet unclassified' }
 Contrato >> getApellidoCliente [
 ^ cliente getApellido
-]
-
-{ #category : 'metodos' }
-Contrato >> getDatos [
-
-	^ servicio getNombre , fechaInicio asString
-	  , ' ', cliente getTelefono asString
 ]
 
 { #category : 'as yet unclassified' }
@@ -104,24 +92,6 @@ Contrato >> getNroContrato [
 { #category : 'initialization' }
 Contrato >> getTelefonoCliente [
 ^ cliente getTelefono 
-]
-
-{ #category : 'inicializar' }
-Contrato >> inicializarContratoConServicio: unServicio inicio: unInicio colElems: unaColElementos cliente: unCliente [
-
-	servicio := unServicio.
-	fechaInicio := unInicio.
-	colElems := unaColElementos.
-	cliente := unCliente
-]
-
-{ #category : 'inicializar' }
-Contrato >> inicializarContratoConServicio: unServicio inicio: unInicio colElems: unaColElementos cliente: unCliente id: idd [
-	id:=idd.
-	servicio := unServicio.
-	fechaInicio := unInicio.
-	colElems := unaColElementos.
-	cliente := unCliente
 ]
 
 { #category : 'initialization' }
@@ -163,11 +133,6 @@ Contrato >> obtenerLista [
 ^ listaElementos 
 ]
 
-{ #category : 'metodos' }
-Contrato >> obtenerMulta [
-^ servicio condicionesMulta: fechaInicio 
-]
-
 { #category : 'as yet unclassified' }
 Contrato >> obtenerServicio [
 ^ self subclassResponsibility 
@@ -188,23 +153,9 @@ Contrato >> sePuedeCancelar [
 ^ self subclassResponsibility 
 ]
 
-{ #category : 'metodos' }
-Contrato >> verFecha [
-^(Date today subtractDate: fechaInicio)<=7.
-]
-
 { #category : 'as yet unclassified' }
 Contrato >> verifContratoUrgencia [
 ^ self subclassResponsibility 
-]
-
-{ #category : 'metodos' }
-Contrato >> verificarCancelacion [
-
-	| exito |
-	exito := false.
-	((fechaInicio - Date today) days > 0) ifTrue: [ exito := true ].
-	^ exito
 ]
 
 { #category : 'as yet unclassified' }

@@ -80,40 +80,9 @@ ContratoMudanza >> getHora [
 ^ horaAcordada.
 ]
 
-{ #category : 'metodos' }
-ContratoMudanza >> getInicio [
-^fechaInicio.
-]
-
 { #category : 'initialization' }
 ContratoMudanza >> getNombreServicio [
 ^ servMudanza getNombre 
-]
-
-{ #category : 'inicializar' }
-ContratoMudanza >> inicializarContratoMudanzaConServicio: unServicio inicio: unInicio colElems: unaColElementos cliente: unCliente destino: unDestino origen: unOrigen [
-
-	self
-		inicializarContratoConServicio: unServicio
-		inicio: unInicio
-		colElems: unaColElementos
-		cliente: unCliente.
-	destino := unDestino.
-	origen := unOrigen
-	"inicio va a ser tipo DateAndTime"
-]
-
-{ #category : 'inicializar' }
-ContratoMudanza >> inicializarContratoMudanzaConServicio: unServicio inicio: unInicio colElems: unaColElementos cliente: unCliente id:idd destino: unDestino origen: unOrigen [
-
-	self inicializarContratoConServicio: unServicio 
-	inicio: unInicio 
-	colElems: unaColElementos 
-	cliente: unCliente 
-	id: idd.
-	destino := unDestino.
-	origen := unOrigen
-	"inicio va a ser tipo DateAndTime"
 ]
 
 { #category : 'initialization' }
@@ -162,20 +131,6 @@ ContratoMudanza >> obtenerServicio [
 { #category : 'as yet unclassified' }
 ContratoMudanza >> reprogramar: nuFecha [
 fechaAcordada := nuFecha .
-]
-
-{ #category : 'metodos' }
-ContratoMudanza >> reprogramar: nuevaFechaInicio urgencia: esUrgente [
-
-	| costoReprogramacion |
-	costoReprogramacion := 0.
-	(fechaInicio asDate subtractDate: Date today) > 0
-	& ((servicio verificarReprogramacion: fechaInicio) | esUrgente)
-		ifTrue: [
-			fechaInicio := nuevaFechaInicio.
-			esUrgente ifTrue: [
-				costoReprogramacion := costoReprogramacion * (1.2) ] ].
-	^ costoReprogramacion
 ]
 
 { #category : 'as yet unclassified' }

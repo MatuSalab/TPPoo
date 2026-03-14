@@ -110,11 +110,6 @@ Empresa >> buscarContrato: unCon [
 ]
 
 { #category : 'as yet unclassified' }
-Empresa >> buscarServicio: unNombre [
-	^(colServicios detect:[:unServicio|unServicio compararNombre: unNombre]).
-]
-
-{ #category : 'as yet unclassified' }
 Empresa >> buscarServicios: elementoSeleccionado [
 
 	| listado |
@@ -150,16 +145,6 @@ Empresa >> cancelarContrato: unCod [
 		unCont cancelar.
 		unCont agregarValor: valorPorCancelar ].
 	^ rta
-]
-
-{ #category : 'metodos' }
-Empresa >> contratoPertenece: unContrato [
-
-	| contrato |
-	contrato := colContratos
-		            detect: [ :cadaContrato | cadaContrato = unContrato ]
-		            ifNone: [ nil ].
-	^ contrato notNil
 ]
 
 { #category : 'as yet unclassified' }
@@ -217,37 +202,6 @@ paginaWeb := unaPa .
 telefono := unTe .
 ]
 
-{ #category : 'inicializar' }
-Empresa >> inicializarEmpresaConServicios: unaColServicios contratos: unaColContratos contratosCancelados: contrato direccion: unaDireccion pagina: unaPagina razon: unaRazon telefono: unTelefono [
-
-	colServicios := unaColServicios.
-	colContratos := unaColContratos.
-	direccion := unaDireccion.
-	pagina := unaPagina.
-	razon := unaRazon.
-	telefono := unTelefono.
-	contratosCancelados:= contrato. 
-]
-
-{ #category : 'inicializar' }
-Empresa >> inicializarEmpresaConServicios: unaColServicios contratos: unaColContratos direccion: unaDireccion pagina: unaPagina razon: unaRazon telefono: unTelefono [
-
-	colServicios := unaColServicios.
-	colContratos := unaColContratos.
-	direccion := unaDireccion.
-	pagina := unaPagina.
-	razon := unaRazon.
-	telefono := unTelefono.
-]
-
-{ #category : 'as yet unclassified' }
-Empresa >> renovar: unId cosas:cosas [
-	|contrato|
-	contrato:=colContratos detect:[:unContrato|unContrato equals: unId].
-	contrato renovar: Date today cosas: cosas.
-	
-]
-
 { #category : 'as yet unclassified' }
 Empresa >> renovarContrato: numContrato conLista: lista conFecha: unaNuevaFecha [
 
@@ -261,12 +215,6 @@ Empresa >> renovarContrato: numContrato conLista: lista conFecha: unaNuevaFecha 
 		ifNil: [ existe := false ].
 
 	^ existe
-]
-
-{ #category : 'as yet unclassified' }
-Empresa >> reprogramar: id urgencia: urgencia fechaNueva: nuevaFecha [
-|contrato|
-contrato:=colContratos detect: [:unContrato|unContrato equals: id] ifFound: [ contrato reprogramar: nuevaFecha urgencia: urgencia ].
 ]
 
 { #category : 'as yet unclassified' }

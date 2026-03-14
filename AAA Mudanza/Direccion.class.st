@@ -44,26 +44,6 @@ dpto := unDpto .
 barrio := unBa .
 ]
 
-{ #category : 'metodos' }
-Direccion >> inicializarDireccionConBarrio: unBarrio calle: unaCalle dpto: unDepartamento nro: unNumero piso: unPiso [
-
-	barrio := unBarrio.
-	calle := unaCalle.
-	dpto := unDepartamento.
-	nro := unNumero.
-	piso := unPiso
-]
-
-{ #category : 'metodos' }
-Direccion >> iniciarDireccionConBarrio: unBarrio calle: unaCalle dpto: unDepartamento nro: unNumero piso: unPiso [
-
-	barrio := unBarrio.
-	calle := unaCalle.
-	dpto := unDepartamento.
-	nro := unNumero.
-	piso := unPiso
-]
-
 { #category : 'as yet unclassified' }
 Direccion >> mostrarDireccion [
 

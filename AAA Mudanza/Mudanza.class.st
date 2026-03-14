@@ -33,15 +33,6 @@ Mudanza >> condicionesMulta:inicio [
 	self subclassResponsibility.
 ]
 
-{ #category : 'metodos' }
-Mudanza >> costoFinal [
-|precioFinal|
-precioFinal:=costo.
-colExtras do:[:unExtra|precioFinal:=precioFinal+unExtra].
-^precioFinal.
-
-]
-
 { #category : 'as yet unclassified' }
 Mudanza >> devolverListaDatos [
 | listado textoValor textoDistancia |
@@ -83,14 +74,6 @@ Mudanza >> getNombre [
 ^ super getNombre
 ]
 
-{ #category : 'intialization' }
-Mudanza >> inicializarMudanzaConNombre: unNombre costo: unCosto descripcion: unaDescripcion capacidad: unaCapacidad colExtras: unaCol [
-	self inicializarServicioConNombre: unNombre	 costo: unCosto descripcion: unaDescripcion.
-	capacidad := unaCapacidad.
-	colExtras := unaCol.
-	reprogramada := false
-]
-
 { #category : 'initialization' }
 Mudanza >> iniciar: desc conNombre: unNo conValorBase: unVa conValorAdicional: unValor yDistanciaMax: dista [
 self inicializar: desc conNombre: unNo conValor: unVa.
@@ -109,11 +92,6 @@ Mudanza >> mostrarDatos [
 { #category : 'as yet unclassified' }
 Mudanza >> vefCancelacion: fechaAcordada [
 ^ self subclassResponsibility 
-]
-
-{ #category : 'metodos' }
-Mudanza >> verificarReprogramacion: inicio [
-	^reprogramada not.
 ]
 
 { #category : 'initialization' }
