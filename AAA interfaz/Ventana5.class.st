@@ -120,6 +120,7 @@ Ventana5 >> intentarRepContratoMud: miEmpresa elNum: bloqueNumero elCont: contra
 	tituloMorph position: origen + (400@55).
 
 	"-------------------------------------Tipo renovacion-------------------------------------"
+	"pepe"
 	
 	texto1 := StringMorph new.
 	texto1 contents: 'ingrese el tipo de reprogramacion'.
