@@ -47,7 +47,8 @@ Ventana1 >> crearGuardamueble: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel2.png' asFileReference.
+	
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -55,10 +56,10 @@ Ventana1 >> crearGuardamueble: miEmpresa [
 	
 	"-------------------------------------Botones-------------------------------------"
 	
-	botonElemento := BotonAccion2 new. botonElemento ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\agregar.png'.
-	botonCliente := BotonAccion2 new. botonCliente ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
-	botonConfirmacion := BotonAccion2 new. botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar.png'.
-	botonServicio := BotonAccion2 new. botonServicio ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonElemento := BotonAccion2 new. botonElemento ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/agregar.png'.
+	botonCliente := BotonAccion2 new. botonCliente ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
+	botonConfirmacion := BotonAccion2 new. botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar.png'.
+	botonServicio := BotonAccion2 new. botonServicio ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	elemento := RubTextFieldMorph new.
 	duracion := RubTextFieldMorph new.
 	
@@ -77,7 +78,7 @@ Ventana1 >> crearGuardamueble: miEmpresa [
 	lista extent: 200 @ 50.
 	lista color: Color darkGray.
 	lista position: elemento position + (0 @ 100).
-	elementosPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\lista_elementos.png' asFileReference.
+	elementosPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/lista_elementos.png' asFileReference.
 	elementosImage := PNGReadWriter formFromFileNamed: elementosPath fullName.
 	elementosMorph := ImageMorph new image: elementosImage.
 	self addMorph: elementosMorph.
@@ -106,7 +107,7 @@ Ventana1 >> crearGuardamueble: miEmpresa [
 	servicios position: origen + (150 @ 200).
 	textoDatosServicio := StringMorph contents: ''.
 	
-	serviciosPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\lista_servicios.png' asFileReference.
+	serviciosPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/lista_servicios.png' asFileReference.
 	serviciosImage := PNGReadWriter formFromFileNamed: serviciosPath fullName.
 	serviciosMorph := ImageMorph new image: serviciosImage.
 	self addMorph: serviciosMorph.
@@ -241,7 +242,7 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel2.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -249,10 +250,10 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 	
 	"-------------------------------------Botones-------------------------------------"
 	
-	botonElemento := BotonAccion2 new. botonElemento ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\agregar.png'.
-	botonCliente := BotonAccion2 new. botonCliente ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
-	botonConfirmacion := BotonAccion2 new. botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar.png'.
-	botonServicio := BotonAccion2 new. botonServicio ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonElemento := BotonAccion2 new. botonElemento ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/agregar.png'.
+	botonCliente := BotonAccion2 new. botonCliente ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
+	botonConfirmacion := BotonAccion2 new. botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar.png'.
+	botonServicio := BotonAccion2 new. botonServicio ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	elemento := RubTextFieldMorph new.
 	
 	"-------------------------------------Listas-------------------------------------"
@@ -270,7 +271,7 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 	lista extent: 200 @ 50.
 	lista color: Color darkGray.
 	lista position: elemento position + (0 @ 100).
-	elementosPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\lista_elementos.png' asFileReference.
+	elementosPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/lista_elementos.png' asFileReference.
 	elementosImage := PNGReadWriter formFromFileNamed: elementosPath fullName.
 	elementosMorph := ImageMorph new image: elementosImage.
 	self addMorph: elementosMorph.
@@ -299,7 +300,7 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 	servicios position: origen + (150 @ 200).
 	textoDatosServicio := StringMorph contents: ''.
 	
-	serviciosPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\lista_servicios.png' asFileReference.
+	serviciosPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/lista_servicios.png' asFileReference.
 	serviciosImage := PNGReadWriter formFromFileNamed: serviciosPath fullName.
 	serviciosMorph := ImageMorph new image: serviciosImage.
 	self addMorph: serviciosMorph.
@@ -347,7 +348,7 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 	horaAcordada extent: 200 @ 30.
 	horaAcordada position: cuadroCliente position + (0 @ 80).
 	
-	horariosPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\seleccion_horario.png' asFileReference.
+	horariosPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/seleccion_horario.png' asFileReference.
 	horariosImage := PNGReadWriter formFromFileNamed: horariosPath fullName.
 	horariosMorph := ImageMorph new image: horariosImage.
 	self addMorph: horariosMorph.
@@ -442,7 +443,7 @@ Ventana1 >> generarDireccionDestino: unContrato para: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel2.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -450,7 +451,7 @@ Ventana1 >> generarDireccionDestino: unContrato para: miEmpresa [
 	
 	"-------------------------------------Direccion-------------------------------------"
 	
-	direccionPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\direccion_destino.png' asFileReference.
+	direccionPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/direccion_destino.png' asFileReference.
 	direccionImage := PNGReadWriter formFromFileNamed: direccionPath fullName.
 	direccionMorph := ImageMorph new image: direccionImage.
 	self addMorph: direccionMorph.
@@ -481,7 +482,7 @@ Ventana1 >> generarDireccionDestino: unContrato para: miEmpresa [
 	barrio position: depto position + (0 @ 50).
 	
 	
-	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_direccion.png'.
+	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_direccion.png'.
 	botonConfirmar position: origen + (590 @ 500).
 	
 	botonConfirmar mouseAction: [
@@ -521,7 +522,7 @@ Ventana1 >> generarDireccionOrigen: unContrato para: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel2.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -529,7 +530,7 @@ Ventana1 >> generarDireccionOrigen: unContrato para: miEmpresa [
 	
 	"-------------------------------------Direccion-------------------------------------"
 	
-	direccionPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\direccion_origen.png' asFileReference.
+	direccionPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/direccion_origen.png' asFileReference.
 	direccionImage := PNGReadWriter formFromFileNamed: direccionPath fullName.
 	direccionMorph := ImageMorph new image: direccionImage.
 	self addMorph: direccionMorph.
@@ -560,7 +561,7 @@ Ventana1 >> generarDireccionOrigen: unContrato para: miEmpresa [
 	barrio position: depto position + (0 @ 50).
 	
 	
-	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_direccion.png'.
+	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/'.
 	botonConfirmar position: origen + (590 @ 500).
 	
 	botonConfirmar mouseAction: [
@@ -604,13 +605,13 @@ Ventana1 >> registrarContrato: miEmpresa [
 	self initialize.
 	ventanaPrincipal := VentanaPrincipal new.
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\seleccion_contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/seleccion_contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
 	tituloMorph position: origen + (475@250).
 	
-	tituloPath2 := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel2.png' asFileReference.
+	tituloPath2 := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
 	tituloImage2 := PNGReadWriter formFromFileNamed: tituloPath2 fullName.
 	tituloMorph2 := ImageMorph new image: tituloImage2.
 	self addMorph: tituloMorph2.
@@ -622,7 +623,7 @@ Ventana1 >> registrarContrato: miEmpresa [
 	contratos list: items.
 	botonConfirmacion := BotonAccion2 new.
 	"botonConfirmacion := BotonAccion2 new."
-	botonConfirmacion label: 'confirmar servicio'. botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonConfirmacion label: 'confirmar servicio'. botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	"botonConfirmacion target: self.
 	botonConfirmacion color: Color gray."
 	"texto position: origen + (0 @ 0)."

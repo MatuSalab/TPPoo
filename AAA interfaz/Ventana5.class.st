@@ -21,7 +21,7 @@ Ventana5 >> buscarContratoMudanza: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\reprogramar_mudanza.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/reprogramar_mudanza.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -37,7 +37,7 @@ Ventana5 >> buscarContratoMudanza: miEmpresa [
 	"-------------------------------------Boton Buscar-------------------------------------"
 	
 	botonBuscar := BotonAccion2 new.
-	botonBuscar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
+	botonBuscar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
 	botonBuscar position: bloqueNumero position + (320@0).
 	
 	texto color: Color white.
@@ -66,7 +66,7 @@ Ventana5 >> buscarContratoMudanza: miEmpresa [
 	"-------------------------------------Boton Confirmar-------------------------------------"
 	
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	botonConfirmacion position: origen + (570 @ 450).
 	
 	botonConfirmacion mouseAction: [
@@ -113,7 +113,7 @@ Ventana5 >> intentarRepContratoMud: miEmpresa elNum: bloqueNumero elCont: contra
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\reprogramar_mudanza.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/reprogramar_mudanza.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -174,7 +174,7 @@ Ventana5 >> intentarRepContratoMud: miEmpresa elNum: bloqueNumero elCont: contra
 	"-------------------------------------Boton confirmacion-------------------------------------"
 	
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_reprogramacion.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_reprogramacion.png'.
 	botonConfirmacion position: origen + (570 @ 470).
 
 	botonConfirmacion mouseAction: [

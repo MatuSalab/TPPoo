@@ -36,7 +36,7 @@ Ventana4 >> buscarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\renovar_contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/renovar_contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -52,7 +52,7 @@ Ventana4 >> buscarContrato: miEmpresa [
 	"-------------------------------------Boton Buscar-------------------------------------"
 
 	botonBuscar := BotonAccion2 new.
-	botonBuscar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
+	botonBuscar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
 	botonBuscar position: bloqueNumero position + (320@0).
 	
 	texto color: Color white.
@@ -79,7 +79,7 @@ Ventana4 >> buscarContrato: miEmpresa [
 	"-------------------------------------Boton Fecha-------------------------------------"
 	
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	botonConfirmacion position: origen + (570 @ 450).
 	
 	botonConfirmacion mouseAction: [
@@ -132,7 +132,7 @@ Ventana4 >> ingresarFechaYElementos: unContrato para: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\renovar_contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/renovar_contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -173,7 +173,7 @@ Ventana4 >> ingresarFechaYElementos: unContrato para: miEmpresa [
 	"-------------------------------------Boton elemento-------------------------------------"
 	
 	botonLista := BotonAccion2 new.
-	botonLista ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\agregar.png'.
+	botonLista ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/agregar.png'.
 	botonLista position: elemento position + (250@0).
 	
 	botonLista mouseAction: [
@@ -188,7 +188,7 @@ Ventana4 >> ingresarFechaYElementos: unContrato para: miEmpresa [
 	"-------------------------------------Boton confirmacion-------------------------------------"
 	
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_renovacion.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/\confirmar_renovacion.png'.
 	botonConfirmacion position: origen + (570 @ 470).
 
 	botonConfirmacion mouseAction: [

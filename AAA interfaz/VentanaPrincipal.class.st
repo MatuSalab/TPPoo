@@ -109,7 +109,7 @@ todas las inicializaciones necesarias relacionadas a variables y comportamiento 
 posición para este morph es la esquina superior izquierda del recuadro. El método 'extent' es para
 indicar el ancho y alto del recuadro "
 	super initialize.
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartel.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph. tituloMorph position: origen + (350@20).
@@ -121,17 +121,17 @@ indicar el ancho y alto del recuadro "
 	self bounds: (self position extent: 1200 @ 600)."
 	"Se crean los elementos gráficos (morphs) que se utilizarán para visualizar de distinta forma la
 fecha contenida en la variable miFecha que referencia al modelo"
-	boton1 := BotonAccion2 new. boton1 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton1.png'.
-	boton2 := BotonAccion2 new. boton2 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton2.png'.
-	boton3 := BotonAccion2 new. boton3 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton3.png'.
-	boton4 := BotonAccion2 new. boton4 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton4.png'.
-	boton5 := BotonAccion2 new. boton5 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton5.png'.
-	boton6 := BotonAccion2 new. boton6 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton6.png'.
-	boton7 := BotonAccion2 new. boton7 ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\boton7.png'.
+	boton1 := BotonAccion2 new. boton1 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton1.png'.
+	boton2 := BotonAccion2 new. boton2 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton2.png'.
+	boton3 := BotonAccion2 new. boton3 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton3.png'.
+	boton4 := BotonAccion2 new. boton4 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton4.png'.
+	boton5 := BotonAccion2 new. boton5 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton5.png'.
+	boton6 := BotonAccion2 new. boton6 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton6.png'.
+	boton7 := BotonAccion2 new. boton7 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton7.png'.
 	"Se crean 2 botones, que serán utilizados para solicitar el incremento y decremento de la fecha
 segun una cantidad de días dada. El tercer botón botonCerrar responderá minimizando la ventana"
-	botonCerrar := BotonAccion2 new. botonCerrar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\salir.png'.
-	min := BotonAccion2 new. min ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\min.png'.
+	botonCerrar := BotonAccion2 new. botonCerrar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/salir.png'.
+	min := BotonAccion2 new. min ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/min.png'.
 	"Se agregan los 5 elementos gráficos a FechaVisual, que actúa como elemento gráfico contenedor"
 	self addMorph: boton1.
 	self addMorph: boton2.

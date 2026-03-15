@@ -18,7 +18,7 @@ Ventana7 >> mostrarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\mostrar_contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/mostrar_contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -34,7 +34,7 @@ Ventana7 >> mostrarContrato: miEmpresa [
 	"-------------------------------------Boton Buscar-------------------------------------"
 
 	botonBuscar := BotonAccion2 new.
-	botonBuscar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
+	botonBuscar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
 	botonBuscar position: bloqueNumero position + (320@0).
 	
 	texto position: bloqueNumero position + (-200 @ 100).

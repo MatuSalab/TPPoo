@@ -26,7 +26,7 @@ Ventana3 >> crearCliente: miEmpresa yDni: nroDni [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartelCliente.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartelCliente.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -90,7 +90,7 @@ Ventana3 >> crearCliente: miEmpresa yDni: nroDni [
 	"-------------------------------------Boton-------------------------------------"
 
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	botonConfirmacion position: origen + (570@500).
 
 	botonConfirmacion mouseAction: [
@@ -187,7 +187,7 @@ Ventana3 >> verificarCliente: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cartelCliente.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartelCliente.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -202,7 +202,7 @@ Ventana3 >> verificarCliente: miEmpresa [
 	"-------------------------------------Boton-------------------------------------"
 
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
 	botonConfirmacion position: bloqueDni position + (320@0).
 
 	botonConfirmacion mouseAction: [

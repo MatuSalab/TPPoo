@@ -18,7 +18,7 @@ Ventana6 >> cancelarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cancelar_Contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cancelar_Contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -34,7 +34,7 @@ Ventana6 >> cancelarContrato: miEmpresa [
 	"-------------------------------------Boton Buscar-------------------------------------"
 	
 	botonBuscar := BotonAccion2 new.
-	botonBuscar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\buscar.png'.
+	botonBuscar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/buscar.png'.
 	botonBuscar position: bloqueNumero position + (320@0).
 	
 
@@ -86,7 +86,7 @@ Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\cancelar_contrato.png' asFileReference.
+	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cancelar_contrato.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph.
@@ -149,7 +149,7 @@ Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 	"-------------------------------------Boton-------------------------------------"
 	
 	botonCancelar := BotonAccion2 new.
-	botonCancelar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar.png'.
+	botonCancelar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar.png'.
 	botonCancelar position: tituloMorph position + (100@450).
 	
 	botonCancelar mouseAction: [

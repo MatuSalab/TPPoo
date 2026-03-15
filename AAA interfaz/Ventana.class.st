@@ -66,12 +66,12 @@ Ventana >> initialize [
 	origen := self innerBounds origin.
 
 	min position: origen + (1100 @ 20).
-	min ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\min.png'.
+	min ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/min.png'.
 
 	botonCerrar position: origen + (1150 @ 20).
-	botonCerrar ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\salir.png'.
+	botonCerrar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/salir.png'.
 
-	botonVolver ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\back.png'.
+	botonVolver ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/back.png'.
 	botonVolver position: origen + (10 @ 20).
 
 	self addMorph: botonCerrar.
