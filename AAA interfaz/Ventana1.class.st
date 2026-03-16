@@ -36,7 +36,7 @@ Ventana1 >> alerta [
 Ventana1 >> crearGuardamueble: miEmpresa [
 
 	| botonElemento elemento lista botonCliente cuadroCliente unaFecha listado botonConfirmacion unContrato elServicio textoElementos textoTamaño botonServicio textoDatosCliente textoCliente listaDatosServicios documento listaDatos posicionServicio fechaInicioActual fechaSeleccionada calculoFecha datosServicio tituloPath tituloImage tituloMorph elementosPath elementosImage elementosMorph 
-	serviciosPath serviciosImage serviciosMorph textoDatosServicio |
+	serviciosPath serviciosImage serviciosMorph textoDatosServicio titulo |
 	self initialize.
 	self iniciarListado.
 	ventanaPrincipal := VentanaPrincipal new.
@@ -46,13 +46,13 @@ Ventana1 >> crearGuardamueble: miEmpresa [
 	listaDatos := listado collect: [ :con | con vistazoDatos ].
 	
 	"-------------------------------------Título-------------------------------------"
-	
-	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
+	titulo := StringMorph contents: 'Registrar Guardamueble'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
 	
 	"-------------------------------------Botones-------------------------------------"
 	

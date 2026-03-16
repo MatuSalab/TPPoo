@@ -12,7 +12,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana2 >> crearServGuardamueble: miEmpresa [
 
-| descripcion  cuadroCliente  botonConfirmacion  conLlave tieneAisl tamanio textLlave textAislamiento desc nomb tam llave ais valB unServicio textoError puedeCrear tituloPath tituloImage tituloMorph valorBase|
+| descripcion  cuadroCliente  botonConfirmacion  conLlave tieneAisl tamanio textLlave textAislamiento desc nomb tam llave ais valB unServicio textoError puedeCrear tituloPath tituloImage tituloMorph valorBase titulo|
 
 
 	"-------------------------------------Inicializar-------------------------------------"
@@ -30,11 +30,13 @@ Ventana2 >> crearServGuardamueble: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/crear_servicio.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Crear Servicio'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 
 	"-------------------------------------Nombre-------------------------------------"
 	
@@ -138,7 +140,7 @@ Ventana2 >> crearServGuardamueble: miEmpresa [
 
 { #category : 'as yet unclassified' }
 Ventana2 >> crearServMudInt: miEmpresa [
-| descripcion  cuadroCliente  botonConfirmacion  textPrincipal textoSeguro desc valB nomb unServMud adicAdu adicTipTrans incluySeg AAdu ATrans TSeg puedeCrear textoError valorBase tituloPath tituloImage tituloMorph|
+| descripcion  cuadroCliente  botonConfirmacion  textPrincipal textoSeguro desc valB nomb unServMud adicAdu adicTipTrans incluySeg AAdu ATrans TSeg puedeCrear textoError valorBase tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -157,11 +159,13 @@ Ventana2 >> crearServMudInt: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/crear_servicio.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Crear Servicio'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 
 	"-------------------------------------Nombre-------------------------------------"
 	
@@ -260,7 +264,7 @@ Ventana2 >> crearServMudInt: miEmpresa [
 
 { #category : 'as yet unclassified' }
 Ventana2 >> crearServMudLoc: miEmpresa [
-| cuadroCliente  botonConfirmacion textoCarga  adicEmb  adicAlt  carga descarga distMax  desc valB nomb  dMax adEmb adAlt unServMud rCar rDesc textoDescarga puedeCrear textoError tituloPath tituloImage tituloMorph descripcion valorBase|
+| cuadroCliente  botonConfirmacion textoCarga  adicEmb  adicAlt  carga descarga distMax  desc valB nomb  dMax adEmb adAlt unServMud rCar rDesc textoDescarga puedeCrear textoError tituloPath tituloImage tituloMorph descripcion valorBase titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -280,11 +284,13 @@ Ventana2 >> crearServMudLoc: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/crear_servicio.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Crear Servicio'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 	
 	"-------------------------------------Nombre-------------------------------------"
 	
@@ -402,7 +408,7 @@ Ventana2 >> crearServMudLoc: miEmpresa [
 
 { #category : 'as yet unclassified' }
 Ventana2 >> crearServMudNac: miEmpresa [
-| descripcion  cuadroCliente  botonConfirmacion textLlave  adicEmb  adicAlt capacidad  intOExt  adicMercFrag adic50kmPasad distMax  desc valB nomb tam intoEx aMerFr ad50km dMax adEmb adAlt unServMud puedeCrear textoError valorBase tituloPath tituloImage tituloMorph|
+| descripcion  cuadroCliente  botonConfirmacion textLlave  adicEmb  adicAlt capacidad  intOExt  adicMercFrag adic50kmPasad distMax  desc valB nomb tam intoEx aMerFr ad50km dMax adEmb adAlt unServMud puedeCrear textoError valorBase tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -424,12 +430,13 @@ Ventana2 >> crearServMudNac: miEmpresa [
 	 distMax := RubTextFieldMorph new.
 	
 	"-------------------------------------Título-------------------------------------"
-	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/crear_servicio.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Crear Servicio'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 	
 	"-------------------------------------Nombre-------------------------------------"
 	
