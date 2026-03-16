@@ -231,7 +231,7 @@ titulo position: origen + (450 @ 55).
 { #category : 'as yet unclassified' }
 Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 
-	| botonElemento elemento lista botonCliente cuadroCliente unaFecha listado botonConfirmacion unContrato elServicio textoElementos textoTamaño botonServicio textoDatosCliente textoCliente listaDatosServicios documento listaDatos posicionServicio fechaInicioActual fechaSeleccionada calculoFecha datosServicio tituloPath tituloImage tituloMorph elementosPath elementosImage elementosMorph serviciosPath serviciosImage serviciosMorph textoDatosServicio horarios horariosPath horariosImage horariosMorph textoDirecciones hora|
+	| botonElemento elemento lista botonCliente cuadroCliente unaFecha listado botonConfirmacion unContrato elServicio textoElementos textoTamaño botonServicio textoDatosCliente textoCliente listaDatosServicios documento listaDatos posicionServicio fechaInicioActual fechaSeleccionada calculoFecha datosServicio tituloPath tituloImage tituloMorph elementosPath elementosImage elementosMorph serviciosPath serviciosImage serviciosMorph textoDatosServicio horarios horariosPath horariosImage horariosMorph textoDirecciones hora titulo|
 	self initialize.
 	self iniciarListado.
 	ventanaPrincipal := VentanaPrincipal new.
@@ -241,12 +241,13 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 	listaDatos := listado collect: [ :con | con vistazoDatos ].
 
 	"-------------------------------------Título-------------------------------------"
-	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
+titulo := StringMorph contents: 'Registrar Mudanza'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
 	
 	"-------------------------------------Botones-------------------------------------"
 	
@@ -438,17 +439,18 @@ Ventana1 >> crearMudanza: contratoSeleccionado conEmpresa: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana1 >> generarDireccionDestino: unContrato para: miEmpresa [
 
-	| direccion numero piso depto barrio botonConfirmar tituloPath tituloImage tituloMorph direccionPath direccionImage direccionMorph|
+	| direccion numero piso depto barrio botonConfirmar tituloPath tituloImage tituloMorph direccionPath direccionImage direccionMorph titulo|
 	self initialize.
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
-	
+titulo := StringMorph contents: 'Direccion Destino'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
 	"-------------------------------------Direccion-------------------------------------"
 	
 	direccionPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/direccion_destino.png' asFileReference.
@@ -517,17 +519,17 @@ Ventana1 >> generarDireccionDestino: unContrato para: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana1 >> generarDireccionOrigen: unContrato para: miEmpresa [
 
-	| direccion numero piso depto barrio botonConfirmar tituloPath tituloImage tituloMorph direccionPath direccionImage direccionMorph|
+	| direccion numero piso depto barrio botonConfirmar tituloPath tituloImage tituloMorph direccionPath direccionImage direccionMorph titulo|
 	self initialize.
 	
-	"-------------------------------------Título-------------------------------------"
-	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
-	
+titulo := StringMorph contents: 'Direccion Origen'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
+
 	"-------------------------------------Direccion-------------------------------------"
 	
 	direccionPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/direccion_origen.png' asFileReference.
@@ -561,7 +563,7 @@ Ventana1 >> generarDireccionOrigen: unContrato para: miEmpresa [
 	barrio position: depto position + (0 @ 50).
 	
 	
-	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/'.
+	botonConfirmar := BotonAccion2 new. botonConfirmar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_direccion.png'.
 	botonConfirmar position: origen + (590 @ 500).
 	
 	botonConfirmar mouseAction: [
@@ -600,22 +602,24 @@ Ventana1 >> iniciarListado [
 { #category : 'as yet unclassified' }
 Ventana1 >> registrarContrato: miEmpresa [
 
-	| contratos items botonConfirmacion texto tituloPath tituloImage tituloMorph tituloPath2 tituloImage2 tituloMorph2|
+	| contratos items botonConfirmacion texto tituloPath tituloImage tituloMorph tituloPath2 tituloImage2 tituloMorph2 titulo titulo2|
 	
 	self initialize.
 	ventanaPrincipal := VentanaPrincipal new.
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/seleccion_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@250).
-	
-	tituloPath2 := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel2.png' asFileReference.
-	tituloImage2 := PNGReadWriter formFromFileNamed: tituloPath2 fullName.
-	tituloMorph2 := ImageMorph new image: tituloImage2.
-	self addMorph: tituloMorph2.
-	tituloMorph2 position: origen + (450@55).
+titulo := StringMorph contents: 'Registrar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
+
+titulo2 := StringMorph contents: 'Seleccione tipo de contrato'.
+titulo2 color: Color white.
+titulo2 font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 22).
+titulo2 emphasis: 1.
+self addMorph: titulo2.
+titulo2 position: origen + (475 @ 250).
 
 	contratos := DropListMorph new.
 	items := #( 'guardaMueble' 'mudanzaLocal' 'mudanzaNacional'
