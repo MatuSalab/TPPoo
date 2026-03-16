@@ -114,12 +114,14 @@ Contrato >> mostrarDatoContrato [
 { #category : 'initialization' }
 Contrato >> mostrarDatos [
 
-	| nombreCliente telefono |
-	nombreCliente := cliente getNombre.
-	telefono := cliente getTelefono.
-	
-	^ '| nombre del cliente: ' asString , nombreCliente asString
-	  , ', telefono:' asString , telefono asString
+| nombreCliente telefono |
+
+nombreCliente := cliente getNombre.
+telefono := cliente getTelefono.
+
+^ 'Numero de contrato: ', nroContrato asString, String cr,
+  'Nombre del cliente: ', nombreCliente asString, String cr,
+  'Telefono: ', telefono asString
 ]
 
 { #category : 'initialization' }
