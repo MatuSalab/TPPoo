@@ -13,6 +13,7 @@ Class {
 		'ventana5',
 		'ventana6',
 		'ventana7',
+		'ventana8',
 		'ventanaPrincipal'
 	],
 	#category : 'AAA interfaz',

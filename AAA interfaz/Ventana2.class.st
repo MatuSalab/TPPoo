@@ -83,7 +83,7 @@ Ventana2 >> crearServGuardamueble: miEmpresa [
 	"-------------------------------------Boton-------------------------------------"
 	
 	botonConfirmacion := BotonAccion2 new.
-	botonConfirmacion ponerIcono: 'C:\Users\Matu\Documents\Pharo\images\cosa-01\recursos\confirmar_servicio.png'.
+	botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
 	botonConfirmacion position: origen + (570@500).
 		
 	botonConfirmacion mouseAction: [

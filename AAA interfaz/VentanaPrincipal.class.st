@@ -9,6 +9,7 @@ Class {
 		'boton5',
 		'boton6',
 		'boton7',
+		'boton8',
 		'mensaje',
 		'listaContratos',
 		'listaServicios'
@@ -88,6 +89,13 @@ cada botón"
 		ventana7 position: self position.
 		self cerrar ].
 	
+	boton8 mouseAction: [
+		ventana8 mostrarListadoDeContratoSemanal: miEmpresa.
+		ventana8 position: self position.
+		self cerrar ].
+	botonVolver delete.
+	
+	
 	botonCerrar mouseAction: [ self cerrar ].
 	min mouseAction: [ self minimizar ].
 	miEmpresa addDependent: self.
@@ -128,6 +136,8 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	boton5 := BotonAccion2 new. boton5 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton5.png'.
 	boton6 := BotonAccion2 new. boton6 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton6.png'.
 	boton7 := BotonAccion2 new. boton7 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton7.png'.
+	boton8 := BotonAccion2 new. boton8 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton9.png'.
+	
 	"Se crean 2 botones, que serán utilizados para solicitar el incremento y decremento de la fecha
 segun una cantidad de días dada. El tercer botón botonCerrar responderá minimizando la ventana"
 	botonCerrar := BotonAccion2 new. botonCerrar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/salir.png'.
@@ -140,6 +150,7 @@ segun una cantidad de días dada. El tercer botón botonCerrar responderá minim
 	self addMorph: boton5.
 	self addMorph: boton6.
 	self addMorph: boton7.
+	self addMorph: boton8.
 	"Se posicionan los elementos gráficos dentro del área de VentanaPrincipal"
 	origen := self innerBounds origin.
 	"tamañoBoton := 300 @ 30."
@@ -177,6 +188,7 @@ segun una cantidad de días dada. El tercer botón botonCerrar responderá minim
 	boton7 color: Color black.
 	boton7 extent: tamañoBoton.
 	boton7 roundedCorners: 5."
+	boton8 position: origen + (400 @ 450).
 
 	"botonVolver delete."
 
@@ -186,5 +198,7 @@ segun una cantidad de días dada. El tercer botón botonCerrar responderá minim
 	ventana4 := Ventana4 new.
 	ventana5 := Ventana5 new.
 	ventana6 := Ventana6 new.
-	ventana7 := Ventana7 new
+	ventana7 := Ventana7 new.
+	ventana8 := Ventana8 new.
+	
 ]

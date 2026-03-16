@@ -107,18 +107,26 @@ ContratoMudanza >> mostrarDatoContrato [
 ]
 
 { #category : 'initialization' }
-ContratoMudanza >> mostrarDatos [ 
-|nombreServicio datos tipoMudanza|
+ContratoMudanza >> mostrarDatos [
 
-nombreServicio := servMudanza getNombre .
-	servMudanza esLocal  ifTrue: [ tipoMudanza := 'mudanzaLocal' ].
-	servMudanza esNacional  ifTrue: [ tipoMudanza := 'mudanzaNacional' 	].
-	servMudanza esInternacional  ifTrue: [ tipoMudanza := 'mudanzaInternacional'  ].
+| nombreServicio tipoMudanza datos |
 
-datos := super mostrarDatos , ', nombre de servicio: ' asString
-	  , nombreServicio asString , ', ' asString, tipoMudanza asString , ' |' asString.
+nombreServicio := servMudanza getNombre.
 
-^datos 
+servMudanza esLocal ifTrue: [
+	tipoMudanza := 'Mudanza Local'].
+
+servMudanza esNacional ifTrue: [
+	tipoMudanza := 'Mudanza Nacional'].
+
+servMudanza esInternacional ifTrue: [
+	tipoMudanza := 'Mudanza Internacional'].
+
+datos := super mostrarDatos , String cr ,
+	'Nombre de servicio: ', nombreServicio asString , String cr ,
+	'Tipo de mudanza: ', tipoMudanza.
+
+^ datos
 ]
 
 { #category : 'as yet unclassified' }
