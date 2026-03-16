@@ -562,25 +562,29 @@ Ventana2 >> crearServMudNac: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana2 >> registrarServicio: miEmpresa [
 
-	| contratos items botonConfirmacion  textoError tituloPath tituloImage tituloMorph tituloPath2 tituloImage2 tituloMorph2|
+	| contratos items botonConfirmacion  textoError tituloPath tituloImage tituloMorph tituloPath2 tituloImage2 tituloMorph2 titulo titulo2|
 	self initialize.
 	
 	textoError := StringMorph new.
 	textoError contents: ''.
 	ventanaPrincipal := VentanaPrincipal new.
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/seleccion_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@250).
-	
-	tituloPath2 := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/crear_servicio.png' asFileReference.
-	tituloImage2 := PNGReadWriter formFromFileNamed: tituloPath2 fullName.
-	tituloMorph2 := ImageMorph new image: tituloImage2.
-	self addMorph: tituloMorph2.
-	tituloMorph2 position: origen + (450@55).
-	
+titulo := StringMorph contents: 'Crear Servicio'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (470 @ 55).
+
+
+titulo2 := StringMorph contents: 'Seleccion de tipo de contrato'.
+titulo2 color: Color white.
+titulo2 font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 22).
+titulo2 emphasis: 1.
+
+self addMorph: titulo2.
+titulo2 position: origen + (420 @ 250).
 	contratos := DropListMorph new.
 	items := #( 'guardaMueble' 'mudanzaLocal' 'mudanzaNacional'
 	            'mudanzaInternacional' ).

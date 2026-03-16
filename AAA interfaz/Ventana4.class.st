@@ -25,7 +25,7 @@ Ventana4 >> agregarElemento: unElem [
 { #category : 'as yet unclassified' }
 Ventana4 >> buscarContrato: miEmpresa [
 
-	| botonConfirmacion texto unServ bloqueNumero unContrato botonBuscar textoContrato tituloPath tituloImage tituloMorph|
+	| botonConfirmacion texto unServ bloqueNumero unContrato botonBuscar textoContrato tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -36,17 +36,19 @@ Ventana4 >> buscarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/renovar_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (420@55).
+titulo := StringMorph contents: 'Renovar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (420 @ 55).
 	
 	"-------------------------------------Num contrato-------------------------------------"
 	
 	bloqueNumero := RubTextFieldMorph new.
 	bloqueNumero ghostText: 'ingrese numero del contrato'.
-	bloqueNumero position: tituloMorph position + (-10 @ 200).
+	bloqueNumero position: titulo position + (-10 @ 200).
 	bloqueNumero extent: 300 @ 100.
 	
 	"-------------------------------------Boton Buscar-------------------------------------"
@@ -110,7 +112,7 @@ Ventana4 >> buscarContrato: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana4 >> ingresarFechaYElementos: unContrato para: miEmpresa [
 
-	| botonConfirmacion texto unServ botonLista lista textoElementos textoTamaño elemento textoListado textoFecha fechaSeleccionada fechaInicioActual calculoFecha tituloPath tituloImage tituloMorph|
+	| botonConfirmacion texto unServ botonLista lista textoElementos textoTamaño elemento textoListado textoFecha fechaSeleccionada fechaInicioActual calculoFecha tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -132,11 +134,13 @@ Ventana4 >> ingresarFechaYElementos: unContrato para: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/renovar_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
+titulo := StringMorph contents: 'Renovar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (450 @ 55).
 	
 	"-------------------------------------Fecha-------------------------------------"
 

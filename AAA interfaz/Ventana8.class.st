@@ -12,7 +12,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana8 >> mostrarListadoDeContratoSemanal: miEmpresa [
 
-	| texto bloqueNumero botonBuscar tituloPath tituloImage tituloMorph listContratos|
+	| texto bloqueNumero botonBuscar tituloPath tituloImage tituloMorph listContratos titulo|
 	
 
 	self initialize.
@@ -37,11 +37,12 @@ Ventana8 >> mostrarListadoDeContratoSemanal: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/listadoC.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (400@55).
+titulo := StringMorph contents: 'Listado de Contratos Semanales'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+self addMorph: titulo.
+titulo position: origen + (260 @ 55).
 	
 
 

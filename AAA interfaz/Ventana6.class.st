@@ -8,7 +8,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana6 >> cancelarContrato: miEmpresa [
 
-	| bloqueNumero unContrato botonBuscar tituloPath tituloImage tituloMorph|
+	| bloqueNumero unContrato botonBuscar tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -18,17 +18,17 @@ Ventana6 >> cancelarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cancelar_Contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
-	
+titulo := StringMorph contents: 'Cancelar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+self addMorph: titulo.
+titulo position: origen + (430 @ 55).
 	"-------------------------------------Num contrato-------------------------------------"
 	
 	bloqueNumero := RubTextFieldMorph new.
 	bloqueNumero ghostText: 'ingrese numero del contrato'.
-	bloqueNumero position: tituloMorph position + (-50 @ 250).
+	bloqueNumero position: titulo position + (-50 @ 250)..
 	bloqueNumero extent: 300 @ 100.
 	
 	"-------------------------------------Boton Buscar-------------------------------------"
@@ -62,7 +62,7 @@ Ventana6 >> cancelarContrato: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 
-	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso tituloPath tituloImage tituloMorph|
+	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso tituloPath tituloImage tituloMorph titulo|
 	
 		"-------------------------------------Inicializar-------------------------------------"
 	
@@ -86,11 +86,13 @@ Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cancelar_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (450@55).
+titulo := StringMorph contents: 'Cancelar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (430 @ 55).
 	
 	"-------------------------------------Datos contrato-------------------------------------"
 
@@ -150,7 +152,7 @@ Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 	
 	botonCancelar := BotonAccion2 new.
 	botonCancelar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar.png'.
-	botonCancelar position: tituloMorph position + (100@450).
+	botonCancelar position: titulo position + (100@450).
 	
 	botonCancelar mouseAction: [
 		(miEmpresa cancelarContrato: nroContrato)

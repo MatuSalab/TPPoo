@@ -8,7 +8,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana7 >> mostrarContrato: miEmpresa [
 
-	| texto bloqueNumero unContrato botonBuscar tituloPath tituloImage tituloMorph|
+	| texto bloqueNumero unContrato botonBuscar tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -18,17 +18,18 @@ Ventana7 >> mostrarContrato: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/mostrar_contrato.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Mostrar Contrato'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+self addMorph: titulo.
+titulo position: origen + (430 @ 55).
 	
 	"-------------------------------------Num contrato-------------------------------------"
 	
 	bloqueNumero := RubTextFieldMorph new.
 	bloqueNumero ghostText: 'ingrese numero del contrato'.
-	bloqueNumero position: tituloMorph position + (-50 @ 250).
+	bloqueNumero position: titulo position + (-70 @ 250).
 	bloqueNumero extent: 300 @ 100.
 	
 	"-------------------------------------Boton Buscar-------------------------------------"

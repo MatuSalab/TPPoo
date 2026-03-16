@@ -8,7 +8,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana3 >> crearCliente: miEmpresa yDni: nroDni [
 
-	| botonConfirmacion bloqueNombre bloqueTelefono bloqueApellido bloqueCalle bloqueNumero bloquePiso bloqueDpto bloqueBarrio cuadroDatos tituloPath tituloImage tituloMorph|
+	| botonConfirmacion bloqueNombre bloqueTelefono bloqueApellido bloqueCalle bloqueNumero bloquePiso bloqueDpto bloqueBarrio cuadroDatos tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -26,11 +26,13 @@ Ventana3 >> crearCliente: miEmpresa yDni: nroDni [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartelCliente.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Crear Cliente'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 	
 	"-------------------------------------Nombre-------------------------------------"
 	
@@ -177,7 +179,7 @@ Ventana3 >> tieneNumero: unaCadena [
 { #category : 'as yet unclassified' }
 Ventana3 >> verificarCliente: miEmpresa [
 
-	| bloqueDni botonConfirmacion unCliente tituloPath tituloImage tituloMorph|
+	| bloqueDni botonConfirmacion unCliente tituloPath tituloImage tituloMorph titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -186,17 +188,18 @@ Ventana3 >> verificarCliente: miEmpresa [
 	bloqueDni := RubTextFieldMorph new.
 	
 	"-------------------------------------Título-------------------------------------"
-	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartelCliente.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (475@55).
+titulo := StringMorph contents: 'Verificar Cliente'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (475 @ 55).
 	
 	"-------------------------------------Dni-------------------------------------"
 
 	bloqueDni ghostText: 'Ingrese el DNI'.
-	bloqueDni position: tituloMorph position + (-50 @ 250).
+	bloqueDni position: titulo position + (-50 @ 250).
 	bloqueDni extent: 300 @ 100.
 	
 	"-------------------------------------Boton-------------------------------------"

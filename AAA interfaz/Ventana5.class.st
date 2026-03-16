@@ -8,7 +8,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana5 >> buscarContratoMudanza: miEmpresa [
 
-| botonConfirmacion unServ bloqueNumero unContrato botonBuscar texto tituloPath tituloImage tituloMorph textoContrato|
+| botonConfirmacion unServ bloqueNumero unContrato botonBuscar texto tituloPath tituloImage tituloMorph textoContrato titulo |
 
 	"-------------------------------------Inicializar-------------------------------------"
 
@@ -21,17 +21,20 @@ Ventana5 >> buscarContratoMudanza: miEmpresa [
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/reprogramar_mudanza.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (390@55).
+
+titulo := StringMorph contents: 'Reprogramar Mudanza'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (390 @ 55).
 	
 	"-------------------------------------Num contrato-------------------------------------"
 	
 	bloqueNumero := RubTextFieldMorph new.
 	bloqueNumero ghostText: 'numero'.
-	bloqueNumero position: tituloMorph position + (20 @ 200).
+	bloqueNumero position: titulo position + (20 @ 200).
 	bloqueNumero extent: 300 @ 100.
 	
 	"-------------------------------------Boton Buscar-------------------------------------"
@@ -99,7 +102,7 @@ Ventana5 >> buscarContratoMudanza: miEmpresa [
 { #category : 'as yet unclassified' }
 Ventana5 >> intentarRepContratoMud: miEmpresa elNum: bloqueNumero elCont: contrato [
 
-	| bloqueOpcion tipoRepro texto1 texto2 dniCliente nroContr fecha hora esPosible elTipo textoNega textoNega2 calendario unaFecha tipoServ tituloPath tituloImage tituloMorph botonConfirmacion|
+	| bloqueOpcion tipoRepro texto1 texto2 dniCliente nroContr fecha hora esPosible elTipo textoNega textoNega2 calendario unaFecha tipoServ tituloPath tituloImage tituloMorph botonConfirmacion titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -113,11 +116,13 @@ Ventana5 >> intentarRepContratoMud: miEmpresa elNum: bloqueNumero elCont: contra
 	
 	"-------------------------------------Título-------------------------------------"
 	
-	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/reprogramar_mudanza.png' asFileReference.
-	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
-	tituloMorph := ImageMorph new image: tituloImage.
-	self addMorph: tituloMorph.
-	tituloMorph position: origen + (400@55).
+titulo := StringMorph contents: 'Reprogramar Mudanza'.
+titulo color: Color white.
+titulo font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 28).
+titulo emphasis: 1.
+
+self addMorph: titulo.
+titulo position: origen + (380 @ 55).
 
 	"-------------------------------------Tipo renovacion-------------------------------------"
 	"pepe"
