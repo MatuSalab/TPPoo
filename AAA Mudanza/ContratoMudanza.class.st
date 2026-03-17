@@ -107,18 +107,19 @@ ContratoMudanza >> mostrarDatoContrato [
 ]
 
 { #category : 'initialization' }
-ContratoMudanza >> mostrarDatos [  
+ContratoMudanza >> mostrarDatos [
 	| nombreServicio tipoMudanza datos |
-
+	
 	nombreServicio := servMudanza getNombre.
-
 	tipoMudanza := 'Desconocido'.
+
 	servMudanza esLocal ifTrue: [ tipoMudanza := 'Mudanza Local' ].
 	servMudanza esNacional ifTrue: [ tipoMudanza := 'Mudanza Nacional' ].
 	servMudanza esInternacional ifTrue: [ tipoMudanza := 'Mudanza Internacional' ].
 
 	datos := super mostrarDatos , String cr ,
-		'Fecha: ', self getFecha asString , String cr ,
+		'Fecha de inicio: ', self getFecha asString , String cr ,
+		'Fecha de firma: ', self obtenerFechaFirma asString , String cr ,
 		'Nombre de servicio: ', nombreServicio asString , String cr ,
 		'Tipo de mudanza: ', tipoMudanza.
 
@@ -128,6 +129,11 @@ ContratoMudanza >> mostrarDatos [
 { #category : 'initialization' }
 ContratoMudanza >> obtenerFecha [
 ^ fechaAcordada 
+]
+
+{ #category : 'as yet unclassified' }
+ContratoMudanza >> obtenerFechaFirma [
+^fechaFirma 
 ]
 
 { #category : 'as yet unclassified' }

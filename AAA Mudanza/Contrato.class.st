@@ -113,21 +113,28 @@ Contrato >> mostrarDatoContrato [
 
 { #category : 'initialization' }
 Contrato >> mostrarDatos [
+	| nombreCliente telefono |
 
-| nombreCliente telefono |
+	nombreCliente := cliente getNombre.
+	telefono := cliente getTelefono.
 
-nombreCliente := cliente getNombre.
-telefono := cliente getTelefono.
-
-^ 'Numero de contrato: ', nroContrato asString, String cr,
-  'Nombre del cliente: ', nombreCliente asString, String cr,
-  'Telefono: ', telefono asString
+	^ String streamContents: [ :stream |
+		stream
+			nextPutAll: 'Numero de contrato: '; nextPutAll: nroContrato asString; cr;
+			nextPutAll: 'Nombre del cliente: '; nextPutAll: nombreCliente asString; cr;
+			nextPutAll: 'Telefono: '; nextPutAll: telefono asString
+	]
 ]
 
 { #category : 'initialization' }
 Contrato >> obtenerFecha [
 
 	^ fechaFirma
+]
+
+{ #category : 'as yet unclassified' }
+Contrato >> obtenerFechaFirma [
+^fechaFirma 
 ]
 
 { #category : 'as yet unclassified' }

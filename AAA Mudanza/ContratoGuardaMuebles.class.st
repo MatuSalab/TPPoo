@@ -97,14 +97,20 @@ ContratoGuardaMuebles >> mostrarDatoContrato [
 
 { #category : 'initialization' }
 ContratoGuardaMuebles >> mostrarDatos [
+	| nombreServicio |
 
-| nombreServicio |
-nombreServicio := servGuardamueble getNombre.
+	nombreServicio := servGuardamueble getNombre.
 
-^ super mostrarDatos , String cr ,
-  'Fecha de inicio: ', fechaInicio asString , String cr ,
-  'Nombre de servicio: ', nombreServicio asString , String cr ,
-  'Tipo: Guardamueble'
+	^ super mostrarDatos , String cr ,
+		'Fecha de inicio: ', self getFechaAcordada asString , String cr ,
+		'Fecha de firma: ', self obtenerFechaFirma asString , String cr ,
+		'Nombre de servicio: ', nombreServicio asString , String cr ,
+		'Tipo: Guardamueble'
+]
+
+{ #category : 'as yet unclassified' }
+ContratoGuardaMuebles >> obtenerFechaFirma [
+^fechaFirma 
 ]
 
 { #category : 'as yet unclassified' }
