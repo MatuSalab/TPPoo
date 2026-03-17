@@ -80,9 +80,9 @@ MudanzaNacional >> mostrarDatos [
 
 { #category : 'as yet unclassified' }
 MudanzaNacional >> vefCancelacion: unaFecha [
-|fecha|
-fecha:= Date today.
-^ unaFecha > fecha.
+	| dias |
+	dias := unaFecha subtractDate: Date today.
+	^ dias >= 7
 ]
 
 { #category : 'initialization' }

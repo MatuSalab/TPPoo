@@ -62,7 +62,7 @@ titulo position: origen + (430 @ 55).
 { #category : 'as yet unclassified' }
 Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 
-	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso tituloPath tituloImage tituloMorph titulo|
+	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso  titulo|
 	
 		"-------------------------------------Inicializar-------------------------------------"
 	
