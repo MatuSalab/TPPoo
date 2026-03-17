@@ -226,7 +226,7 @@ Empresa >> reprogramarContrato: numContrato conFecha: nuFecha [
 	unContrato
 		ifNotNil: [
 			esPosible := unContrato verificarContrato.
-			esPosible ifTrue: [ unContrato reprogramar: nuFecha ] ]
+			esPosible ifTrue: [ unContrato reprogramar: nuFecha. unContrato actualizarReprogramacion ] ]
 		ifNil: [ esPosible := false ].
 
 	^ esPosible
@@ -242,7 +242,7 @@ Empresa >> reprogramarUrgencia: numContrato conFecha: nuFecha [
 	unContrato
 		ifNotNil: [
 			esPosible := unContrato verifContratoUrgencia .
-			esPosible ifTrue: [ monto := unContrato calcularMontoAPagar ] ]
+			esPosible ifTrue: [ monto := unContrato calcularMontoAPagar. unContrato actualizarReprogramacion. unContrato reprogramar:nuFecha ] ]
 		ifNil: [ esPosible := false ].
 
 	^ monto

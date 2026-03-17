@@ -62,7 +62,7 @@ titulo position: origen + (430 @ 55).
 { #category : 'as yet unclassified' }
 Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 
-	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso  titulo|
+	| tipoContrato nombreServicio textoNombreContrato textoFechaInicio textoMulta botonCancelar textoApellido telefonoCliente textoDatosCliente textoDatosContrato textoNroContrato textoNombreCliente textoTelefono textoDni calculoMulta textoMonto textoMontoTotal montoTotal valorBase textoAviso  titulo textoFechaFirma|
 	
 		"-------------------------------------Inicializar-------------------------------------"
 	
@@ -83,6 +83,7 @@ Ventana6 >> mostrarContrato: unContrato id: nroContrato yEmpresa: miEmpresa [
 	textoDni := StringMorph new.
 	textoTelefono := StringMorph new.
 	textoAviso := StringMorph new.
+	textoFechaFirma:=StringMorph new.
 	
 	"-------------------------------------Título-------------------------------------"
 	
@@ -108,9 +109,15 @@ titulo position: origen + (430 @ 55).
 	textoNroContrato color: Color white.
 	textoNroContrato position: textoNombreContrato position + (0 @ 30).
 	
-	textoFechaInicio contents: 'Fecha inicio: ' , unContrato obtenerFecha asString.
+	textoFechaInicio contents: 'Fecha inicio: ' , unContrato obtenerFechaIncio asString.
 	textoFechaInicio color: Color white.
 	textoFechaInicio position: textoNroContrato position + (0 @ 30).
+	
+	textoFechaFirma contents: 'Fecha firma: ' , unContrato obtenerFechaFirma asString.
+	textoFechaFirma color: Color white.
+	textoFechaFirma position: textoNroContrato position + (0 @ 120).
+	
+
 	
 	textoMonto contents: 'Valor Base: ' , tipoContrato obtenerValorBase asString.
 	textoMonto color: Color white.
@@ -121,10 +128,7 @@ titulo position: origen + (430 @ 55).
 	textoMulta contents: ''.
 	textoMulta position: textoMonto position + (0 @ 30).
 
-	textoMontoTotal := StringMorph new.
-	textoMontoTotal contents: 'Monto total a pagar: ' , montoTotal asString.
-	textoMontoTotal color: Color white.
-	textoMontoTotal position: textoMulta position + (0 @ 30).
+
 
 	"-------------------------------------Datos cliente-------------------------------------"
 	
@@ -147,6 +151,7 @@ titulo position: origen + (430 @ 55).
 	textoTelefono contents: 'Telefono: ' , unContrato getTelefonoCliente asString.
 	textoTelefono color: Color white.
 	textoTelefono position: textoDni position + (0 @ 30).
+
 
 	"-------------------------------------Boton-------------------------------------"
 	
@@ -205,7 +210,8 @@ titulo position: origen + (430 @ 55).
 				monto := tipoContrato calcularMonto.
 				textoMulta contents: 'Monto: ' , monto asString ] ].
 		montoTotal := valorBase + calculoMulta ].
-	
+		textoMontoTotal := StringMorph new.
+
 	"--------------------------------------------------------------------------"
 
 	botonVolver mouseAction: [
@@ -228,6 +234,7 @@ titulo position: origen + (430 @ 55).
 	self addMorph: textoMulta.
 	self addMorph: textoMontoTotal.
 	self addMorph: textoAviso.
+	self addMorph: textoFechaFirma.
 	self openCenteredInWorld
 ]
 

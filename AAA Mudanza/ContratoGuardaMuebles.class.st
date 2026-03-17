@@ -59,13 +59,13 @@ self class guardarFecha: unaFecha
 { #category : 'as yet unclassified' }
 ContratoGuardaMuebles >> calcularMontoCancelacion [
 
-	| monto fechaHoy excede |
+	| monto fechaHoy |
 	fechaHoy := Date today.
 	monto := 0.
-	excede := fechaInicio subtractDate: fechaFirma.
-	monto := excede < 4
-		         ifTrue: [ servGuardamueble obtenerValorBase * (0.1) ]
-		         ifFalse: [ 0 ].
+
+	monto := servGuardamueble obtenerValorBase * (0.1).
+		          
+		         
 	^ monto
 ]
 
@@ -111,6 +111,14 @@ ContratoGuardaMuebles >> mostrarDatos [
 { #category : 'as yet unclassified' }
 ContratoGuardaMuebles >> obtenerFechaFirma [
 ^fechaFirma 
+]
+
+{ #category : 'as yet unclassified' }
+ContratoGuardaMuebles >> obtenerFechaIncio [
+
+^fechaInicio 
+
+
 ]
 
 { #category : 'as yet unclassified' }

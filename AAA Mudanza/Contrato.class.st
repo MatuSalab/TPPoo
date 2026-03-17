@@ -100,7 +100,7 @@ Contrato >> iniciar: unaLista conCliente: unCliente [
 	listaElementos := OrderedCollection new.
 	listaElementos addAll: unaLista.
 	cliente := unCliente.
-	fechaFirma := Date today.
+	fechaFirma := Date today subtractDays:11.
 	self class incrementarNum.
 	nroContrato := self class obtenerCodigo.
 	activo := true

@@ -44,6 +44,12 @@ ContratoMudanza >> actualizarContrato: lista conFecha:unaFecha [
 ]
 
 { #category : 'as yet unclassified' }
+ContratoMudanza >> actualizarReprogramacion [
+
+reprogramado := true.
+]
+
+{ #category : 'as yet unclassified' }
 ContratoMudanza >> calcularMontoAPagar [ 
  ^servMudanza calcularMontoAPagar.
 ]
@@ -137,6 +143,14 @@ ContratoMudanza >> obtenerFechaFirma [
 ]
 
 { #category : 'as yet unclassified' }
+ContratoMudanza >> obtenerFechaIncio [
+
+^fechaAcordada 
+
+
+]
+
+{ #category : 'as yet unclassified' }
 ContratoMudanza >> obtenerServicio [
 
 	^ servMudanza 
@@ -219,8 +233,8 @@ ContratoMudanza >> verifContratoUrgencia [
 	fechaHoy := Date today.
 	rta := reprogramado
 		               ifTrue: [ false ]
-		               ifFalse: [ fechaAcordada subtractDate: fechaHoy ].
-	^ rta >= 0
+		               ifFalse: [ (fechaAcordada subtractDate: fechaHoy) >= 0 ].
+	^ rta
 ]
 
 { #category : 'as yet unclassified' }
