@@ -28,7 +28,7 @@ titulo position: origen + (430 @ 55).
 	
 	bloqueNumero := RubTextFieldMorph new.
 	bloqueNumero ghostText: 'ingrese numero del contrato'.
-	bloqueNumero position: titulo position + (-50 @ 250)..
+	bloqueNumero position: titulo position + (0 @ 250).
 	bloqueNumero extent: 300 @ 100.
 	
 	"-------------------------------------Boton Buscar-------------------------------------"
