@@ -619,7 +619,7 @@ titulo2 color: Color white.
 titulo2 font: (LogicalFont familyName: 'Bitmap DejaVu Sans' pointSize: 22).
 titulo2 emphasis: 1.
 self addMorph: titulo2.
-titulo2 position: origen + (475 @ 250).
+titulo2 position: origen + (440@ 250).
 
 	contratos := DropListMorph new.
 	items := #( 'guardaMueble' 'mudanzaLocal' 'mudanzaNacional'
