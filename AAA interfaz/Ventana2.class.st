@@ -374,7 +374,7 @@ titulo position: origen + (475 @ 55).
 	 ]]]]]]].
 				(puedeCrear)
 			ifFalse: [
-					"los valores con 0 es porque en la creacion del objeto esos parametros son     					inecesarios"
+					"los valores con 0 es porque en la creacion del objeto esos parametros son     					innecesarios"
 				unServMud:= 	MudanzaLocal crear: desc conNombre: nomb conValorBase: valB 				conValorAdicional: adEmb  conDistanciaMax: dMax conDistancia: 0  realizarCarga: rCar  				realizarDescarga: rDesc.
 				miEmpresa agregarServicio: unServMud.
 				self update: miEmpresa.

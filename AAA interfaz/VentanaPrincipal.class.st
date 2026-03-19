@@ -107,26 +107,18 @@ cada botón"
 
 { #category : 'as yet unclassified' }
 VentanaPrincipal >> initialize [
-	"este método se ejecutará inmediatamente después del new"
-
-	"dado que FechaVisual es subclase de BorderedMorph, es necesario asegurar que se realizarán
-todas las inicializaciones necesarias relacionadas a variables y comportamiento heredado"
+	"este método se ejecuta despues de iniciar"
 
 	| tamañoBoton tituloPath tituloImage tituloMorph|
-	"se establece el color del elemento gráfico, y su posición en la pantalla, o sea el WORLD. La
-posición para este morph es la esquina superior izquierda del recuadro. El método 'extent' es para
-indicar el ancho y alto del recuadro "
+	
 	super initialize.
 	tituloPath := 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/cartel.png' asFileReference.
 	tituloImage := PNGReadWriter formFromFileNamed: tituloPath fullName.
 	tituloMorph := ImageMorph new image: tituloImage.
 	self addMorph: tituloMorph. tituloMorph position: origen + (350@20).
-	"
 	
-	tituloMorph position: origen + (475@250).
-	self color: (Color r: 0.06 g: 0.10 b: 0.17).
-	self position: 45 @ 45.
-	self bounds: (self position extent: 1200 @ 600)."
+	
+	
 	"Se crean los elementos gráficos (morphs) que se utilizarán para visualizar de distinta forma la
 fecha contenida en la variable miFecha que referencia al modelo"
 	boton1 := BotonAccion2 new. boton1 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton1.png'.
@@ -138,11 +130,10 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	boton7 := BotonAccion2 new. boton7 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton7.png'.
 	boton8 := BotonAccion2 new. boton8 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton9.png'.
 	
-	"Se crean 2 botones, que serán utilizados para solicitar el incremento y decremento de la fecha
-segun una cantidad de días dada. El tercer botón botonCerrar responderá minimizando la ventana"
+	
 	botonCerrar := BotonAccion2 new. botonCerrar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/salir.png'.
 	min := BotonAccion2 new. min ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/min.png'.
-	"Se agregan los 5 elementos gráficos a FechaVisual, que actúa como elemento gráfico contenedor"
+	
 	self addMorph: boton1.
 	self addMorph: boton2.
 	self addMorph: boton3.
@@ -151,46 +142,18 @@ segun una cantidad de días dada. El tercer botón botonCerrar responderá minim
 	self addMorph: boton6.
 	self addMorph: boton7.
 	self addMorph: boton8.
+	
 	"Se posicionan los elementos gráficos dentro del área de VentanaPrincipal"
 	origen := self innerBounds origin.
-	"tamañoBoton := 300 @ 30."
+	
 	boton1 position: origen + (150 @ 150).
-	"boton1 label: 'registrar contrato'.
-	boton1 color: Color black.
-	boton1 extent: tamañoBoton."
 	boton2 position: origen + (400 @ 150).
-	"boton2 label: 'crear nuevo servicio'.
-	boton2 color: Color black.
-	boton2 extent: tamañoBoton.
-	boton2 roundedCorners: 5."
 	boton3 position: origen + (650 @ 150).
-	"boton3 label: 'crear nuevo cliente'.
-	boton3 color: Color black.
-	boton3 extent: tamañoBoton.
-	boton3 roundedCorners: 5."
 	boton4 position: origen + (150 @ 300).
-	"boton4 label: 'renovar contrato guardamuebles'.
-	boton4 color: Color black.
-	boton4 extent: tamañoBoton.
-	boton4 roundedCorners: 5."
 	boton5 position: origen + (400 @ 300).
-	"boton5 label: 'reprogramar contrato de mudanza'.
-	boton5 color: Color black.
-	boton5 extent: tamañoBoton.
-	boton5 roundedCorners: 5."
 	boton6 position: origen + (650 @ 300).
-	"boton6 label: 'cancelar contrato'.
-	boton6 color: Color black.
-	boton6 extent: tamañoBoton.
-	boton6 roundedCorners: 5."
 	boton7 position: origen + (150 @ 450).
-	"boton7 label: 'mostrar un contrato'.
-	boton7 color: Color black.
-	boton7 extent: tamañoBoton.
-	boton7 roundedCorners: 5."
 	boton8 position: origen + (400 @ 450).
-
-	"botonVolver delete."
 
 	ventana1 := Ventana1 new.
 	ventana2 := Ventana2 new.

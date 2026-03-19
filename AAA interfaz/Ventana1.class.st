@@ -626,21 +626,14 @@ titulo2 position: origen + (440@ 250).
 	            'mudanzaInternacional' ).
 	contratos list: items.
 	botonConfirmacion := BotonAccion2 new.
-	"botonConfirmacion := BotonAccion2 new."
 	botonConfirmacion label: 'confirmar servicio'. botonConfirmacion ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/confirmar_servicio.png'.
-	"botonConfirmacion target: self.
-	botonConfirmacion color: Color gray."
-	"texto position: origen + (0 @ 0)."
-	"texto color: Color black."
+	
 	contratos extent: 300 @ 30.
 	contratos position: origen + (450 @ 300).
-	"texto position: contratos position + (25 @ -30)."
+	
 	botonConfirmacion position: origen + (550 @ 450).
-	"botonConfirmacion extent: 200 @ 50."
-
 
 	self addMorph: contratos.
-	"self addMorph: texto."
 	self addMorph: botonConfirmacion.
 
 	botonConfirmacion mouseAction: [
