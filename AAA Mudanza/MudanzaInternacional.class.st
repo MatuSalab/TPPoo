@@ -86,5 +86,5 @@ fecha:= Date today.
 { #category : 'initialization' }
 MudanzaInternacional >> verificarTipoTransporte [
 
-	^ tipoTransporte isNil
+	^ tipoTransporte isNotNil.
 ]
