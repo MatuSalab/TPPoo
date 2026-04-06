@@ -8,7 +8,7 @@ Class {
 { #category : 'as yet unclassified' }
 Ventana6 >> cancelarContrato: miEmpresa [
 
-	| bloqueNumero unContrato botonBuscar tituloPath tituloImage tituloMorph titulo|
+	| bloqueNumero unContrato botonBuscar  titulo|
 	
 	"-------------------------------------Inicializar-------------------------------------"
 	
@@ -47,7 +47,7 @@ titulo position: origen + (430 @ 55).
 				unContrato
 					ifNotNil: [
 						self mostrarContrato: unContrato id: bloqueNumero text asString yEmpresa: miEmpresa.
-						self update: miEmpresa ]
+						]
 					ifNil: [ UIManager inform: 'Contrato no encontrado.' ] ] ].
 
 	botonVolver mouseAction: [
@@ -217,8 +217,7 @@ titulo position: origen + (430 @ 55).
 	botonVolver mouseAction: [
 		self cerrar.
 		self cancelarContrato: miEmpresa ].
-	
-	self update: miEmpresa.
+
 
 	self addMorph: textoNombreContrato.
 	self addMorph: botonCancelar.

@@ -108,7 +108,7 @@ titulo position: origen + (475 @ 55).
 					"llamo a los metodos que crearan el servicio y luego lo agregaran a la lista de servicios existentes"
 				unServicio := Guardamuebles descripcion: desc  nombre: nomb  valorBase: valB tamaño: tam aislamiento: ais guardaLLave: llave. 
 				miEmpresa agregarServicio: unServicio .
-				self update: miEmpresa.
+	
 				ventanaPrincipal iniciar: miEmpresa.
 				self cerrar ]
 			ifTrue:[
@@ -233,7 +233,7 @@ titulo position: origen + (475 @ 55).
 					
 				unServMud:= 	MudanzaInternacional crear: desc conNombre: nomb conValorBase: valB conValorAdicional: 0  conDistanciaMax: 0 conSeguro: TSeg  conValorDelTramite: adicAdu  conValorDelTransporte: ATrans   conTipoTransporte: 0. 
 				miEmpresa agregarServicio: unServMud.
-				self update: miEmpresa.
+			
 				ventanaPrincipal iniciar: miEmpresa.
 				self cerrar ]
 			ifTrue: [ 
@@ -377,7 +377,7 @@ titulo position: origen + (475 @ 55).
 					"los valores con 0 es porque en la creacion del objeto esos parametros son     					innecesarios"
 				unServMud:= 	MudanzaLocal crear: desc conNombre: nomb conValorBase: valB 				conValorAdicional: adEmb  conDistanciaMax: dMax conDistancia: 0  realizarCarga: rCar  				realizarDescarga: rDesc.
 				miEmpresa agregarServicio: unServMud.
-				self update: miEmpresa.
+			
 				ventanaPrincipal iniciar: miEmpresa.
 				self cerrar ]
 			ifTrue: [ 
@@ -535,7 +535,7 @@ titulo position: origen + (475 @ 55).
 					
 				unServMud:= 	MudanzaNacional crear: desc conNombre: nomb conValorBase: valB 				conValorAdicional: adEmb conDistanciaMax: ad50km   salida: intoEx  valorMercaderiaFragil: 				aMerFr   valorDistancia: dMax.
 				miEmpresa agregarServicio: unServMud.
-				self update: miEmpresa.
+			
 				ventanaPrincipal iniciar: miEmpresa.
 				self cerrar ]
 			ifTrue: [
@@ -617,16 +617,16 @@ titulo2 position: origen + (420 @ 250).
 				self cerrar.
 				elementoSeleccionado = 'guardaMueble' ifTrue: [
 					self crearServGuardamueble: miEmpresa.
-					self update: miEmpresa ].
+		 ].
 
 				elementoSeleccionado = 'mudanzaLocal' ifTrue: [
 					self crearServMudLoc: miEmpresa.
-					self update: miEmpresa ].
+				].
 
 
 				elementoSeleccionado = 'mudanzaNacional' ifTrue: [
 					self crearServMudNac: miEmpresa.
-					self update: miEmpresa ].
+				 ].
 
 				elementoSeleccionado = 'mudanzaInternacional' ifTrue: [
 					self crearServMudInt: miEmpresa.

@@ -205,7 +205,7 @@ titulo position: origen + (450 @ 55).
 					conFecha: fechaSeleccionada ]
 			ifNil: [
 			unContrato actualizarContrato: nil conFecha: fechaSeleccionada ].
-		self update: miEmpresa.
+	
 		ventanaPrincipal iniciar: miEmpresa.
 		self cerrar ] ifFalse: [  ].
 		 ].

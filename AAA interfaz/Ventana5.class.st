@@ -229,7 +229,7 @@ titulo position: origen + (380 @ 55).
 									'EL CONTRATO YA FUE REALIZADO U HOY ES EL DIA DE 	REALIZACION' ].
 						textoNega2 position: textoNega position + (0 @ 15).
 						textoNega2 color: Color white.
-						self update: miEmpresa ] ] ].
+					 ] ] ].
 
 	botonVolver mouseAction: [
 		self cerrar.

@@ -134,7 +134,7 @@ titulo position: origen + (475 @ 55).
 					, 'Numero de Departamento: ' , bloqueNumero text asString
 					, String cr , 'Barrio: ' , bloqueBarrio text asString , String cr.
 
-				self update: miEmpresa ] ].
+			] ].
 
 	botonVolver mouseAction: [
 		self cerrar.

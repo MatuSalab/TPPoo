@@ -195,7 +195,7 @@ titulo position: origen + (450 @ 55).
 						              conServicio: elServicio
 						              conCliente: cliente.
 					miEmpresa agregarContrato: unContrato.
-					self update: miEmpresa.
+			
 					ventanaPrincipal iniciar: miEmpresa.
 					self cerrar ]
 			ifFalse: [  ] ].
@@ -499,7 +499,7 @@ titulo position: origen + (450 @ 55).
 					                   barrio: barrio text asString.
 				unContrato cambiarDireccionDestino: direccionDestino.
 				miEmpresa agregarContrato: unContrato.
-				self update: miEmpresa.
+	
 				ventanaPrincipal iniciar: miEmpresa.
 				self cerrar. ]
 			ifFalse: [  ] ].

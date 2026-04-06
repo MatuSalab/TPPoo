@@ -13,15 +13,29 @@ Class {
 		'boton9',
 		'mensaje',
 		'listaContratos',
-		'listaServicios'
+		'listaServicios',
+		'listContratos',
+		'listServicios'
 	],
 	#category : 'AAA interfaz',
 	#package : 'AAA interfaz'
 }
 
 { #category : 'as yet unclassified' }
+VentanaPrincipal >> actualizarContratos: unaEmpresa [
+	listContratos := unaEmpresa devolverDatosContratos.
+	self changed: #devolverListaContratos
+]
+
+{ #category : 'as yet unclassified' }
 VentanaPrincipal >> actualizarMensaje: unMensaje [
 mensaje := unMensaje .
+]
+
+{ #category : 'as yet unclassified' }
+VentanaPrincipal >> actualizarServicios: unaEmpresa [
+	listServicios := unaEmpresa devolverDatosServicios.
+	self changed: #devolverListaServicios
 ]
 
 { #category : 'as yet unclassified' }
@@ -31,21 +45,33 @@ VentanaPrincipal >> añadir: aString [
 ]
 
 { #category : 'as yet unclassified' }
+VentanaPrincipal >> devolverListaContratos [
+	^ listContratos
+]
+
+{ #category : 'as yet unclassified' }
+VentanaPrincipal >> devolverListaServicios [
+	^ listServicios
+]
+
+{ #category : 'as yet unclassified' }
 VentanaPrincipal >> iniciar: miEmpresa [
 
-	| listContratos listServicios |
+	
 	self initialize.
 
 	listContratos := miEmpresa devolverDatosContratos.
 	listServicios := miEmpresa devolverDatosServicios.
+
 	listaContratos := PluggableListMorph
-		                  on: listContratos
-		                  list: #yourself
+		                  on: self
+		                  list: #devolverListaContratos
 		                  selected: nil
 		                  changeSelected: nil.
+
 	listaServicios := PluggableListMorph
-		                  on: listServicios
-		                  list: #yourself
+		                  on: self
+		                  list: #devolverListaServicios
 		                  selected: nil
 		                  changeSelected: nil.
 	listaContratos extent: 300 @ 150.
@@ -106,10 +132,10 @@ cada botón"
 	botonCerrar mouseAction: [ self cerrar ].
 	min mouseAction: [ self minimizar ].
 	miEmpresa addDependent: self.
-	self update: miEmpresa.
 	self addMorph: listaContratos.
 	self addMorph: listaServicios.
-	self openCenteredInWorld
+	self openCenteredInWorld.
+	self update: miEmpresa.
 ]
 
 { #category : 'as yet unclassified' }
@@ -176,4 +202,10 @@ boton9 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton10.png'.
 	ventana8 := Ventana8 new.
 	ventana9 := Ventana9 new.
 	
+]
+
+{ #category : 'updating' }
+VentanaPrincipal >> update: unaEmpresa [
+	self actualizarContratos: unaEmpresa.
+	self actualizarServicios: unaEmpresa.
 ]
