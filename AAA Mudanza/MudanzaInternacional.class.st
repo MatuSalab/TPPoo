@@ -76,6 +76,11 @@ MudanzaInternacional >> mostrarDatos [
 	  , ', tipo: mudanza internacional |' asString
 ]
 
+{ #category : 'accessing' }
+MudanzaInternacional >> tipoTransporte: unTipo [
+	tipoTransporte := unTipo
+]
+
 { #category : 'as yet unclassified' }
 MudanzaInternacional >> vefCancelacion: unaFecha [
 |fecha|

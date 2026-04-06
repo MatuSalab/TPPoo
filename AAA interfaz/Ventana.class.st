@@ -14,6 +14,7 @@ Class {
 		'ventana6',
 		'ventana7',
 		'ventana8',
+		'ventana9',
 		'ventanaPrincipal'
 	],
 	#category : 'AAA interfaz',

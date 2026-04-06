@@ -238,6 +238,15 @@ ContratoMudanza >> verifContratoUrgencia [
 ]
 
 { #category : 'as yet unclassified' }
+ContratoMudanza >> verificaEsInternacional [
+
+
+
+
+^(servMudanza esInternacional) 
+]
+
+{ #category : 'as yet unclassified' }
 ContratoMudanza >> verificarCondicion: tipo [
 | esPosible |
 (tipo = 'local') ifTrue: [ esPosible := self verificarLocal ].

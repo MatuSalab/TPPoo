@@ -10,6 +10,7 @@ Class {
 		'boton6',
 		'boton7',
 		'boton8',
+		'boton9',
 		'mensaje',
 		'listaContratos',
 		'listaServicios'
@@ -95,6 +96,12 @@ cada botón"
 		self cerrar ].
 	botonVolver delete.
 	
+	boton9 mouseAction: [
+		ventana9 buscarContratoMudanza: miEmpresa .
+		ventana9 position: self position.
+		self cerrar ].
+	botonVolver delete.
+	
 	
 	botonCerrar mouseAction: [ self cerrar ].
 	min mouseAction: [ self minimizar ].
@@ -129,6 +136,8 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	boton6 := BotonAccion2 new. boton6 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton6.png'.
 	boton7 := BotonAccion2 new. boton7 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton7.png'.
 	boton8 := BotonAccion2 new. boton8 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton9.png'.
+	boton9 := BotonAccion2 new.
+boton9 ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/boton10.png'.
 	
 	
 	botonCerrar := BotonAccion2 new. botonCerrar ponerIcono: 'pharo-local/iceberg/MatuSalab/TPPoo/recursos/salir.png'.
@@ -142,6 +151,7 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	self addMorph: boton6.
 	self addMorph: boton7.
 	self addMorph: boton8.
+	self addMorph: boton9.
 	
 	"Se posicionan los elementos gráficos dentro del área de VentanaPrincipal"
 	origen := self innerBounds origin.
@@ -154,6 +164,7 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	boton6 position: origen + (650 @ 300).
 	boton7 position: origen + (150 @ 450).
 	boton8 position: origen + (400 @ 450).
+	boton9 position: origen + (650 @ 450).
 
 	ventana1 := Ventana1 new.
 	ventana2 := Ventana2 new.
@@ -163,5 +174,6 @@ fecha contenida en la variable miFecha que referencia al modelo"
 	ventana6 := Ventana6 new.
 	ventana7 := Ventana7 new.
 	ventana8 := Ventana8 new.
+	ventana9 := Ventana9 new.
 	
 ]
